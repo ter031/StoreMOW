@@ -1,30 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-14T10:38:05 IST" name="Suite" finished-at="2023-06-14T10:38:26 IST" duration-ms="21079">
+  <suite started-at="2023-06-14T12:18:48 IST" name="Suite" finished-at="2023-06-14T12:20:40 IST" duration-ms="112076">
     <groups>
       <group name="Sanity">
-        <method signature="FooterValidationTest.verifySupportEmail()[pri:0, instance:WebAutomation.tests.FooterValidationTest@5b218417]" name="verifySupportEmail" class="WebAutomation.tests.FooterValidationTest"/>
+        <method signature="FooterValidationTest.verifySupportEmail()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" name="verifySupportEmail" class="WebAutomation.tests.FooterValidationTest"/>
       </group> <!-- Sanity -->
     </groups>
-    <test started-at="2023-06-14T10:38:05 IST" name="Footer Validations" finished-at="2023-06-14T10:38:05 IST" duration-ms="226">
-    </test> <!-- Footer Validations -->
-    <test started-at="2023-06-14T10:38:05 IST" name="Login Validations" finished-at="2023-06-14T10:38:26 IST" duration-ms="21077">
+    <test started-at="2023-06-14T12:18:48 IST" name="Login Validations" finished-at="2023-06-14T12:20:00 IST" duration-ms="72154">
       <class name="WebAutomation.tests.FooterValidationTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FooterValidationTest@5b218417]" started-at="2023-06-14T10:38:05 IST" name="launchApp" finished-at="2023-06-14T10:38:25 IST" duration-ms="20140" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:18:48 IST" name="launchApp" finished-at="2023-06-14T12:19:21 IST" duration-ms="33089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="verifySupportEmail()[pri:0, instance:WebAutomation.tests.FooterValidationTest@5b218417]" started-at="2023-06-14T10:38:25 IST" name="verifySupportEmail" finished-at="2023-06-14T10:38:25 IST" duration-ms="130" status="PASS">
+        <test-method signature="verifyAddress()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:19:21 IST" name="verifyAddress" finished-at="2023-06-14T12:19:23 IST" duration-ms="1639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddress -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:19:23 IST" name="tearDown" finished-at="2023-06-14T12:19:26 IST" duration-ms="2456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:19:26 IST" name="launchApp" finished-at="2023-06-14T12:19:57 IST" duration-ms="31915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="verifySupportEmail()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:19:57 IST" name="verifySupportEmail" finished-at="2023-06-14T12:19:58 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySupportEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FooterValidationTest@5b218417]" started-at="2023-06-14T10:38:25 IST" name="tearDown" finished-at="2023-06-14T10:38:26 IST" duration-ms="714" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FooterValidationTest@24569dba]" started-at="2023-06-14T12:19:58 IST" name="tearDown" finished-at="2023-06-14T12:20:00 IST" duration-ms="2749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- WebAutomation.tests.FooterValidationTest -->
     </test> <!-- Login Validations -->
+    <test started-at="2023-06-14T12:18:48 IST" name="Footer Validations" finished-at="2023-06-14T12:20:40 IST" duration-ms="112076">
+      <class name="WebAutomation.tests.FailedLoginTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:18:48 IST" name="launchApp" finished-at="2023-06-14T12:19:26 IST" duration-ms="37381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="returningCustomerSectionIsThere()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:19:26 IST" name="returningCustomerSectionIsThere" finished-at="2023-06-14T12:19:29 IST" duration-ms="3693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returningCustomerSectionIsThere -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:19:29 IST" name="tearDown" finished-at="2023-06-14T12:19:31 IST" duration-ms="1560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:19:35 IST" name="launchApp" finished-at="2023-06-14T12:20:08 IST" duration-ms="33037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="failedLogin(java.util.HashMap)[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:20:08 IST" name="failedLogin" data-provider="getData" finished-at="2023-06-14T12:20:15 IST" depends-on-methods="WebAutomation.tests.FailedLoginTest.returningCustomerSectionIsThere" duration-ms="7006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=msl, email=thakurdpk786@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:20:15 IST" name="tearDown" finished-at="2023-06-14T12:20:16 IST" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:20:16 IST" name="launchApp" finished-at="2023-06-14T12:20:35 IST" duration-ms="19156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="failedLogin(java.util.HashMap)[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:20:35 IST" name="failedLogin" data-provider="getData" finished-at="2023-06-14T12:20:40 IST" depends-on-methods="WebAutomation.tests.FailedLoginTest.returningCustomerSectionIsThere" duration-ms="4723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Msl, email=deepak@mysutra.life}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.FailedLoginTest@5ab956d7]" started-at="2023-06-14T12:20:40 IST" name="tearDown" finished-at="2023-06-14T12:20:40 IST" duration-ms="686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- WebAutomation.tests.FailedLoginTest -->
+    </test> <!-- Footer Validations -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -2,11 +2,14 @@ package WebAutomation.tests;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import WebAutomation.pageObjects.LandingPage;
@@ -16,11 +19,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FailedLoginTest extends BaseTest {
 	
-	@Test(dependsOnMethods= {"returningCustomerSectionIsThere"})
-	public void failedLogin() throws IOException, InterruptedException {
+	@Test(dependsOnMethods= {"returningCustomerSectionIsThere"}, dataProvider="getData")
+	public void failedLogin(HashMap<String, String> input) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		LoginPage loginpage = landingpage.goToLogin();
-		loginpage.LoginIntoApp("thakurdpk786@gmail.com", "msl");
+		loginpage.LoginIntoApp(input.get("email"), input.get("password"));
 		String message = loginpage.getFailedMessage();
 		Assert.assertTrue(message.equalsIgnoreCase("Warning: No match for E-Mail Address and/or Password."));
 	}
@@ -31,6 +34,13 @@ public class FailedLoginTest extends BaseTest {
 		LoginPage loginpage = landingpage.goToLogin();
 		String headerText = loginpage.getHeaderTextOfReturningCustomerSection();
 		Assert.assertTrue(headerText.equalsIgnoreCase("Returning Customer"));
+	}
+	
+	@DataProvider
+	public Object[][] getData() throws IOException
+	{
+		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//WebAutomation//data//InvalidLoginCredentials.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 
 }
