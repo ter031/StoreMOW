@@ -6,6 +6,9 @@
 			<include name="Sanity"/>
 		</run>
 	</groups>
+	<listeners>
+		<listener class-name="WebAutomation.testComponents.Listeners"/>
+	</listeners>
   <test thread-count="5" name="Footer Validations">
     <classes>
       <class name="WebAutomation.tests.FailedLoginTest"/>

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import WebAutomation.pageObjects.HomePage;
 import WebAutomation.pageObjects.LoginPage;
 
 public class AbstractComponent {
@@ -36,10 +37,19 @@ public class AbstractComponent {
 		return loginpage;
 	}
 	
-	public void LoginIntoApp(String email, String password)
+	public void LoginIntoAppUsingInvalidCredentials(String email, String password)
 	{
 		EmailTextbox.sendKeys(email);
 		PasswordTextbox.sendKeys(password);
 		LoginButton.click();
+	}
+	
+	public HomePage LoginIntoAppUsingValidCredentials(String email, String password)
+	{
+		EmailTextbox.sendKeys(email);
+		PasswordTextbox.sendKeys(password);
+		LoginButton.click();
+		HomePage homepage = new HomePage(driver);
+		return homepage;
 	}
 }
