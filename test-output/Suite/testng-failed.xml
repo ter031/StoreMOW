@@ -4,16 +4,20 @@
   <listeners>
     <listener class-name="WebAutomation.testComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Footer Validations(failed)">
+  <test thread-count="5" parallel="tests" name="Login Validations(failed)">
+    <groups>
+      <run>
+        <include name="Shopping"/>
+      </run>
+    </groups>
     <classes>
-      <class name="WebAutomation.tests.FailedLoginTest">
+      <class name="WebAutomation.tests.ProductShoppingTest">
         <methods>
-          <include name="returningCustomerSectionIsThere"/>
+          <include name="productIsAddedToTheCart" invocation-numbers="0 1"/>
           <include name="launchApp"/>
           <include name="tearDown"/>
-          <include name="failedLogin"/>
         </methods>
-      </class> <!-- WebAutomation.tests.FailedLoginTest -->
+      </class> <!-- WebAutomation.tests.ProductShoppingTest -->
     </classes>
-  </test> <!-- Footer Validations(failed) -->
+  </test> <!-- Login Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import WebAutomation.pageObjects.HomePage;
 import WebAutomation.pageObjects.LoginPage;
+import WebAutomation.pageObjects.ProductPage;
 
 public class AbstractComponent {
 	
@@ -30,6 +31,9 @@ public class AbstractComponent {
 	@FindBy(css="input.btn-primary")
 	WebElement LoginButton;
 	
+	@FindBy(css=".logo a img")
+	WebElement logo;
+	
 	public LoginPage goToLogin()
 	{
 		LoginRegisterButton.click();
@@ -51,5 +55,12 @@ public class AbstractComponent {
 		LoginButton.click();
 		HomePage homepage = new HomePage(driver);
 		return homepage;
+	}
+	
+	public ProductPage clickOnLogo()
+	{
+		logo.click();
+		ProductPage productpage = new ProductPage(driver);
+		return productpage;
 	}
 }
