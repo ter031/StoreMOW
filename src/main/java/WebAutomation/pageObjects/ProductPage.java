@@ -26,6 +26,15 @@ public class ProductPage extends AbstractComponent {
 	@FindBy(xpath="//div[@id='sec3tab2slider1div']/ul/li[1]/div/div[2]/div[1]/div/div/div[1]/a")
 	WebElement viewDetails;
 	
+	@FindBy(id="search")
+	WebElement searchBar;
+	
+	@FindBy(id="button-search")
+	WebElement searchButton;
+	
+	@FindBy(xpath="//section[@class='container-fluid listing-section']/div/div/div[3]/p")
+	WebElement textOnInvalidSearch;
+	
 	public MapDetailPage viewDetailsOfWorldSeaRouteMap()
 	{
 		Actions action = new Actions(driver);
@@ -35,4 +44,14 @@ public class ProductPage extends AbstractComponent {
 		return mapdetailpage;
 	}
 	
+	public void searchAction(String mapToBeSearchFor)
+	{
+		searchBar.sendKeys(mapToBeSearchFor);
+		searchButton.click();
+	}
+	
+	public String getTextOnInvalidSearch()
+	{
+		return textOnInvalidSearch.getText();
+	}
 }

@@ -35,10 +35,28 @@ public class ProductShoppingTest extends BaseTest {
 		Assert.assertTrue(sucessfulTextForMapAdded.equalsIgnoreCase("You have added World Sea Routes Map to your shopping cart!"));
 	}
 	
+	@Test(dataProvider="getSearchData", groups= {"Shopping"})
+	public void noMapIsDisplayedWhenSearchedForInvalidMap(HashMap<String, String> input)
+	{
+		LoginPage loginpage = landingpage.goToLogin();
+		HomePage homepage = loginpage.LoginIntoAppUsingValidCredentials(input.get("email"), input.get("password"));
+		ProductPage productpage = homepage.clickOnLogo();
+		productpage.searchAction(input.get("mapToBeSearchedFor"));
+		String textOnInvalidSearch = productpage.getTextOnInvalidSearch();
+		Assert.assertTrue(textOnInvalidSearch.contains("There is no product that matches the search criteria"));
+	}
+	
 	@DataProvider
 	public Object[][] getData() throws IOException
 	{
 		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//WebAutomation//data//ValidLoginCredentials.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
+	}
+	
+	@DataProvider
+	public Object[][] getSearchData() throws IOException
+	{
+		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//WebAutomation//data//InvalidSearchData.json");
 		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 }

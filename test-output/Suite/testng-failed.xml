@@ -7,15 +7,15 @@
   <test thread-count="5" parallel="tests" name="Login Validations(failed)">
     <groups>
       <run>
-        <include name="Shopping"/>
+        <include name="Search"/>
       </run>
     </groups>
     <classes>
       <class name="WebAutomation.tests.ProductShoppingTest">
         <methods>
-          <include name="productIsAddedToTheCart" invocation-numbers="0 1"/>
           <include name="launchApp"/>
           <include name="tearDown"/>
+          <include name="noMapIsDisplayedWhenSearchedForInvalidMap" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- WebAutomation.tests.ProductShoppingTest -->
     </classes>
