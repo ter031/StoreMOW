@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-21T16:47:08 IST" name="Suite" finished-at="2023-06-21T16:49:45 IST" duration-ms="156721">
+  <suite started-at="2023-07-06T11:16:21 IST" name="Default suite" finished-at="2023-07-06T11:17:27 IST" duration-ms="65461">
     <groups>
-      <group name="Search">
-        <method signature="ProductShoppingTest.noMapIsDisplayedWhenSearchedForInvalidMap(java.util.HashMap)[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" name="noMapIsDisplayedWhenSearchedForInvalidMap" class="WebAutomation.tests.ProductShoppingTest"/>
-      </group> <!-- Search -->
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@4686afc2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-21T16:47:08 IST" name="Login Validations" finished-at="2023-06-21T16:49:45 IST" duration-ms="156721">
-      <class name="WebAutomation.tests.ProductShoppingTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:47:09 IST" name="launchApp" finished-at="2023-06-21T16:48:17 IST" duration-ms="68590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="noMapIsDisplayedWhenSearchedForInvalidMap(java.util.HashMap)[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:48:17 IST" name="noMapIsDisplayedWhenSearchedForInvalidMap" data-provider="getSearchData" finished-at="2023-06-21T16:48:44 IST" duration-ms="26322" status="PASS">
+    <test started-at="2023-07-06T11:16:21 IST" name="Default test" finished-at="2023-07-06T11:17:27 IST" duration-ms="65461">
+      <class name="cucumber.TestNGTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@4686afc2]" started-at="2023-07-06T11:16:21 IST" name="setUpClass" finished-at="2023-07-06T11:16:23 IST" duration-ms="1358" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Msl@1234, mapToBeSearchedFor=World Map Decorator, email=thakurdpk786@gmail.com}]]>
+                <![CDATA[org.testng.TestRunner@3b435211]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- noMapIsDisplayedWhenSearchedForInvalidMap -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:48:44 IST" name="tearDown" finished-at="2023-06-21T16:48:45 IST" duration-ms="842" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:48:45 IST" name="launchApp" finished-at="2023-06-21T16:49:14 IST" duration-ms="28883" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="noMapIsDisplayedWhenSearchedForInvalidMap(java.util.HashMap)[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:49:14 IST" name="noMapIsDisplayedWhenSearchedForInvalidMap" data-provider="getSearchData" finished-at="2023-06-21T16:49:44 IST" duration-ms="30786" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@4686afc2]" started-at="2023-07-06T11:16:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-06T11:17:07 IST" duration-ms="44645" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Msl@1234, mapToBeSearchedFor=World Map Decorator, email=deepakthakur03121992@gmail.com}]]>
+                <![CDATA["Warning message is thrown when user try to login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User is not able to login using invalid credentials"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- noMapIsDisplayedWhenSearchedForInvalidMap -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:WebAutomation.tests.ProductShoppingTest@26ceffa8]" started-at="2023-06-21T16:49:44 IST" name="tearDown" finished-at="2023-06-21T16:49:45 IST" duration-ms="468" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@4686afc2]" started-at="2023-07-06T11:17:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-06T11:17:27 IST" duration-ms="19271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Warning message is thrown when user try to login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User is not able to login using invalid credentials"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- WebAutomation.tests.ProductShoppingTest -->
-    </test> <!-- Login Validations -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@4686afc2]" started-at="2023-07-06T11:17:27 IST" name="tearDownClass" finished-at="2023-07-06T11:17:27 IST" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.TestNGTestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
